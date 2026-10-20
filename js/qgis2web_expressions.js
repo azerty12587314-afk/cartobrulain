@@ -757,7 +757,7 @@ function fnc_project_color(values, context) {
 
 
 
-function exp_Routesbrulain_7rule0_eval_expression(context) {
+function exp_Routesbrulain_1rule0_eval_expression(context) {
     // highway = 'secondary'
 
     var feature = context.feature;
@@ -770,7 +770,7 @@ function exp_Routesbrulain_7rule0_eval_expression(context) {
 }
 
 
-function exp_Routesbrulain_7rule1_eval_expression(context) {
+function exp_Routesbrulain_1rule1_eval_expression(context) {
     // highway = 'tertiary'
 
     var feature = context.feature;
@@ -783,7 +783,7 @@ function exp_Routesbrulain_7rule1_eval_expression(context) {
 }
 
 
-function exp_Routesbrulain_7rule2_eval_expression(context) {
+function exp_Routesbrulain_1rule2_eval_expression(context) {
     // highway = 'residential'
 
     var feature = context.feature;
@@ -796,7 +796,7 @@ function exp_Routesbrulain_7rule2_eval_expression(context) {
 }
 
 
-function exp_Routesbrulain_7rule3_eval_expression(context) {
+function exp_Routesbrulain_1rule3_eval_expression(context) {
     // highway = 'unclassified'
 
     var feature = context.feature;
@@ -809,7 +809,7 @@ function exp_Routesbrulain_7rule3_eval_expression(context) {
 }
 
 
-function exp_tronconroute_8rule0_eval_expression(context) {
+function exp_tronconroute_2rule0_eval_expression(context) {
     // NATURE = 'Bac ou liaison maritime'
 
     var feature = context.feature;
@@ -822,7 +822,7 @@ function exp_tronconroute_8rule0_eval_expression(context) {
 }
 
 
-function exp_tronconroute_8rule1_eval_expression(context) {
+function exp_tronconroute_2rule1_eval_expression(context) {
     // NATURE = 'Bretelle'
 
     var feature = context.feature;
@@ -835,7 +835,7 @@ function exp_tronconroute_8rule1_eval_expression(context) {
 }
 
 
-function exp_tronconroute_8rule2_eval_expression(context) {
+function exp_tronconroute_2rule2_eval_expression(context) {
     // NATURE = 'Chemin'
 
     var feature = context.feature;
@@ -848,7 +848,7 @@ function exp_tronconroute_8rule2_eval_expression(context) {
 }
 
 
-function exp_tronconroute_8rule3_eval_expression(context) {
+function exp_tronconroute_2rule3_eval_expression(context) {
     // NATURE = 'Escalier'
 
     var feature = context.feature;
@@ -861,7 +861,7 @@ function exp_tronconroute_8rule3_eval_expression(context) {
 }
 
 
-function exp_tronconroute_8rule4_eval_expression(context) {
+function exp_tronconroute_2rule4_eval_expression(context) {
     // NATURE = 'Piste cyclable'
 
     var feature = context.feature;
@@ -874,7 +874,7 @@ function exp_tronconroute_8rule4_eval_expression(context) {
 }
 
 
-function exp_tronconroute_8rule5_eval_expression(context) {
+function exp_tronconroute_2rule5_eval_expression(context) {
     // NATURE = 'Route empierrée'
 
     var feature = context.feature;
@@ -887,7 +887,7 @@ function exp_tronconroute_8rule5_eval_expression(context) {
 }
 
 
-function exp_tronconroute_8rule6_eval_expression(context) {
+function exp_tronconroute_2rule6_eval_expression(context) {
     // NATURE = 'Sentier'
 
     var feature = context.feature;
@@ -900,7 +900,7 @@ function exp_tronconroute_8rule6_eval_expression(context) {
 }
 
 
-function exp_tronconroute_8rule7_eval_expression(context) {
+function exp_tronconroute_2rule7_eval_expression(context) {
     // NATURE = 'Type autoroutier'
 
     var feature = context.feature;
@@ -913,7 +913,7 @@ function exp_tronconroute_8rule7_eval_expression(context) {
 }
 
 
-function exp_batiments_9rule0_eval_expression(context) {
+function exp_batiments_3rule0_eval_expression(context) {
     // usage_1 = 'Résidentiel'
 
     var feature = context.feature;
@@ -926,7 +926,7 @@ function exp_batiments_9rule0_eval_expression(context) {
 }
 
 
-function exp_batiments_9rule1_eval_expression(context) {
+function exp_batiments_3rule1_eval_expression(context) {
     // usage_1 = 'Annexe'
 
     var feature = context.feature;
@@ -939,7 +939,7 @@ function exp_batiments_9rule1_eval_expression(context) {
 }
 
 
-function exp_batiments_9rule2_eval_expression(context) {
+function exp_batiments_3rule2_eval_expression(context) {
     // usage_1 = 'Agricole'
 
     var feature = context.feature;
@@ -952,7 +952,7 @@ function exp_batiments_9rule2_eval_expression(context) {
 }
 
 
-function exp_batiments_9rule3_eval_expression(context) {
+function exp_batiments_3rule3_eval_expression(context) {
     // usage_1 = 'Commercial et services'
 
     var feature = context.feature;
@@ -965,7 +965,7 @@ function exp_batiments_9rule3_eval_expression(context) {
 }
 
 
-function exp_batiments_9rule4_eval_expression(context) {
+function exp_batiments_3rule4_eval_expression(context) {
     // usage_1 = 'Industriel'
 
     var feature = context.feature;
@@ -978,7 +978,7 @@ function exp_batiments_9rule4_eval_expression(context) {
 }
 
 
-function exp_batiments_9rule5_eval_expression(context) {
+function exp_batiments_3rule5_eval_expression(context) {
     // usage_1 = 'Sportif'
 
     var feature = context.feature;
@@ -991,7 +991,7 @@ function exp_batiments_9rule5_eval_expression(context) {
 }
 
 
-function exp_batiments_9rule6_eval_expression(context) {
+function exp_batiments_3rule6_eval_expression(context) {
     // usage_1 = 'Religieux'
 
     var feature = context.feature;
@@ -1004,7 +1004,7 @@ function exp_batiments_9rule6_eval_expression(context) {
 }
 
 
-function exp_batiments_9rule7_eval_expression(context) {
+function exp_batiments_3rule7_eval_expression(context) {
     // usage_1 = 'Indifférencié'
 
     var feature = context.feature;

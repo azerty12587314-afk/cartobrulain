@@ -28,7 +28,6 @@
         <script src="js/leaflet.js"></script>
         <script src="js/L.Control.Layers.Tree.min.js"></script>
         <script src="js/multi-style-layer.js"></script>
-        <script src="js/leaflet-svg-shape-markers.min.js"></script>
         <script src="js/leaflet.rotatedMarker.js"></script>
         <script src="js/leaflet.pattern.js"></script>
         <script src="js/leaflet-hash.js"></script>
@@ -37,28 +36,20 @@
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
         <script src="js/leaflet.photon.js"></script>
-        <script src="data/Noeudhydro_0.js"></script>
-        <script src="data/Courdeau_1.js"></script>
-        <script src="data/tronconhydro_2.js"></script>
-        <script src="data/BDT_35_GPKG_LAMB93_D079ED20260315detail_hydrographique_3.js"></script>
-        <script src="data/Surfacehydrographique_4.js"></script>
-        <script src="data/Rservoirhydro_5.js"></script>
-        <script src="data/ligneelec_6.js"></script>
-        <script src="data/Routesbrulain_7.js"></script>
-        <script src="data/tronconroute_8.js"></script>
-        <script src="data/batiments_9.js"></script>
-        <script src="data/Terraindesport_10.js"></script>
-        <script src="data/cimetiere_11.js"></script>
-        <script src="data/BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12.js"></script>
-        <script src="data/pointvoirie_13.js"></script>
-        <script src="data/BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_14.js"></script>
-        <script src="data/lieuxditoklieux_dits_15.js"></script>
-        <script src="data/BDT_35_GPKG_LAMB93_D079ED20260315commune_16.js"></script>
-        <script src="data/BDT_35_GPKG_LAMB93_D079ED20260315voie_nommee_17.js"></script>
+        <script src="data/ligneelec_0.js"></script>
+        <script src="data/Routesbrulain_1.js"></script>
+        <script src="data/tronconroute_2.js"></script>
+        <script src="data/batiments_3.js"></script>
+        <script src="data/Terraindesport_4.js"></script>
+        <script src="data/cimetiere_5.js"></script>
+        <script src="data/BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6.js"></script>
+        <script src="data/pointvoirie_7.js"></script>
+        <script src="data/BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_8.js"></script>
+        <script src="data/BDT_35_GPKG_LAMB93_D079ED20260315commune_9.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[46.195909342730396,-0.33028167311061835],[46.200471564958775,-0.3220308426469874]]);
+        }).fitBounds([[46.17757106123475,-0.36950701493044524],[46.232709001403364,-0.26977680068350873]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/qgis2web/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -140,725 +131,7 @@
         var bounds_group = new L.featureGroup([]);
         function setBounds() {
         }
-        function pop_Noeudhydro_0(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['qc_id'] !== null ? autolinker.link(String(feature.properties['qc_id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['cleabs'] !== null ? autolinker.link(String(feature.properties['cleabs']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['code_hydrographique'] !== null ? autolinker.link(String(feature.properties['code_hydrographique']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['code_du_pays'] !== null ? autolinker.link(String(feature.properties['code_du_pays']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['categorie'] !== null ? autolinker.link(String(feature.properties['categorie']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['toponyme'] !== null ? autolinker.link(String(feature.properties['toponyme']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['statut_du_toponyme'] !== null ? autolinker.link(String(feature.properties['statut_du_toponyme']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['date_creation'] !== null ? autolinker.link(String(feature.properties['date_creation']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['date_modification'] !== null ? autolinker.link(String(feature.properties['date_modification']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['date_d_apparition'] !== null ? autolinker.link(String(feature.properties['date_d_apparition']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['date_de_confirmation'] !== null ? autolinker.link(String(feature.properties['date_de_confirmation']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['sources'] !== null ? autolinker.link(String(feature.properties['sources']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['identifiants_sources'] !== null ? autolinker.link(String(feature.properties['identifiants_sources']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['methode_d_acquisition_planimetrique'] !== null ? autolinker.link(String(feature.properties['methode_d_acquisition_planimetrique']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['precision_planimetrique'] !== null ? autolinker.link(String(feature.properties['precision_planimetrique']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['methode_d_acquisition_altimetrique'] !== null ? autolinker.link(String(feature.properties['methode_d_acquisition_altimetrique']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['precision_altimetrique'] !== null ? autolinker.link(String(feature.properties['precision_altimetrique']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['mode_d_obtention_des_coordonnees'] !== null ? autolinker.link(String(feature.properties['mode_d_obtention_des_coordonnees']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['mode_d_obtention_de_l_altitude'] !== null ? autolinker.link(String(feature.properties['mode_d_obtention_de_l_altitude']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['statut'] !== null ? autolinker.link(String(feature.properties['statut']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['commentaire_sur_l_objet_hydro'] !== null ? autolinker.link(String(feature.properties['commentaire_sur_l_objet_hydro']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['liens_vers_cours_d_eau_amont'] !== null ? autolinker.link(String(feature.properties['liens_vers_cours_d_eau_amont']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['liens_vers_cours_d_eau_aval'] !== null ? autolinker.link(String(feature.properties['liens_vers_cours_d_eau_aval']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
-
-        function style_Noeudhydro_0_0() {
-            return {
-                pane: 'pane_Noeudhydro_0',
-                radius: 3.2,
-                opacity: 1,
-                color: 'rgba(0,0,0,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(164,215,255,1.0)',
-                interactive: true,
-            }
-        }
-        map.createPane('pane_Noeudhydro_0');
-        map.getPane('pane_Noeudhydro_0').style.zIndex = 400;
-        map.getPane('pane_Noeudhydro_0').style['mix-blend-mode'] = 'normal';
-        var layer_Noeudhydro_0 = new L.geoJson(json_Noeudhydro_0, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_Noeudhydro_0',
-            layerName: 'layer_Noeudhydro_0',
-            pane: 'pane_Noeudhydro_0',
-            onEachFeature: pop_Noeudhydro_0,
-            pointToLayer: function (feature, latlng) {
-                var context = {
-                    feature: feature,
-                    variables: {}
-                };
-                return L.circleMarker(latlng, style_Noeudhydro_0_0(feature));
-            },
-        });
-        bounds_group.addLayer(layer_Noeudhydro_0);
-        map.addLayer(layer_Noeudhydro_0);
-        function pop_Courdeau_1(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['qc_id'] !== null ? autolinker.link(String(feature.properties['qc_id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['cleabs'] !== null ? autolinker.link(String(feature.properties['cleabs']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['code_hydrographique'] !== null ? autolinker.link(String(feature.properties['code_hydrographique']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['toponyme'] !== null ? autolinker.link(String(feature.properties['toponyme']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['statut_du_toponyme'] !== null ? autolinker.link(String(feature.properties['statut_du_toponyme']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['importance'] !== null ? autolinker.link(String(feature.properties['importance']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['date_creation'] !== null ? autolinker.link(String(feature.properties['date_creation']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['date_modification'] !== null ? autolinker.link(String(feature.properties['date_modification']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['date_d_apparition'] !== null ? autolinker.link(String(feature.properties['date_d_apparition']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['date_de_confirmation'] !== null ? autolinker.link(String(feature.properties['date_de_confirmation']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['sources'] !== null ? autolinker.link(String(feature.properties['sources']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['identifiants_sources'] !== null ? autolinker.link(String(feature.properties['identifiants_sources']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['statut'] !== null ? autolinker.link(String(feature.properties['statut']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['influence_de_la_maree'] !== null ? autolinker.link(String(feature.properties['influence_de_la_maree']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['caractere_permanent'] !== null ? autolinker.link(String(feature.properties['caractere_permanent']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['commentaire_sur_l_objet_hydro'] !== null ? autolinker.link(String(feature.properties['commentaire_sur_l_objet_hydro']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
-
-        function style_Courdeau_1_0() {
-            return {
-                pane: 'pane_Courdeau_1',
-                opacity: 1,
-                color: 'rgba(125,139,143,1.0)',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                weight: 1.0,
-                fillOpacity: 0,
-                interactive: true,
-            }
-        }
-        map.createPane('pane_Courdeau_1');
-        map.getPane('pane_Courdeau_1').style.zIndex = 401;
-        map.getPane('pane_Courdeau_1').style['mix-blend-mode'] = 'normal';
-        var layer_Courdeau_1 = new L.geoJson(json_Courdeau_1, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_Courdeau_1',
-            layerName: 'layer_Courdeau_1',
-            pane: 'pane_Courdeau_1',
-            onEachFeature: pop_Courdeau_1,
-            style: style_Courdeau_1_0,
-        });
-        bounds_group.addLayer(layer_Courdeau_1);
-        map.addLayer(layer_Courdeau_1);
-        function pop_tronconhydro_2(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['qc_id'] !== null ? autolinker.link(String(feature.properties['qc_id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['cleabs'] !== null ? autolinker.link(String(feature.properties['cleabs']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['code_hydrographique'] !== null ? autolinker.link(String(feature.properties['code_hydrographique']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['code_du_pays'] !== null ? autolinker.link(String(feature.properties['code_du_pays']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['nature'] !== null ? autolinker.link(String(feature.properties['nature']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['fictif'] !== null ? autolinker.link(String(feature.properties['fictif']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['etat_de_l_objet'] !== null ? autolinker.link(String(feature.properties['etat_de_l_objet']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['position_par_rapport_au_sol'] !== null ? autolinker.link(String(feature.properties['position_par_rapport_au_sol']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['date_creation'] !== null ? autolinker.link(String(feature.properties['date_creation']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['date_modification'] !== null ? autolinker.link(String(feature.properties['date_modification']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['date_d_apparition'] !== null ? autolinker.link(String(feature.properties['date_d_apparition']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['date_de_confirmation'] !== null ? autolinker.link(String(feature.properties['date_de_confirmation']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['sources'] !== null ? autolinker.link(String(feature.properties['sources']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['identifiants_sources'] !== null ? autolinker.link(String(feature.properties['identifiants_sources']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['methode_d_acquisition_planimetrique'] !== null ? autolinker.link(String(feature.properties['methode_d_acquisition_planimetrique']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['precision_planimetrique'] !== null ? autolinker.link(String(feature.properties['precision_planimetrique']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['methode_d_acquisition_altimetrique'] !== null ? autolinker.link(String(feature.properties['methode_d_acquisition_altimetrique']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['precision_altimetrique'] !== null ? autolinker.link(String(feature.properties['precision_altimetrique']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['mode_d_obtention_des_coordonnees'] !== null ? autolinker.link(String(feature.properties['mode_d_obtention_des_coordonnees']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['mode_d_obtention_de_l_altitude'] !== null ? autolinker.link(String(feature.properties['mode_d_obtention_de_l_altitude']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['statut'] !== null ? autolinker.link(String(feature.properties['statut']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['persistance'] !== null ? autolinker.link(String(feature.properties['persistance']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['fosse'] !== null ? autolinker.link(String(feature.properties['fosse']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['navigabilite'] !== null ? autolinker.link(String(feature.properties['navigabilite']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['salinite'] !== null ? autolinker.link(String(feature.properties['salinite']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['numero_d_ordre'] !== null ? autolinker.link(String(feature.properties['numero_d_ordre']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['strategie_de_classement'] !== null ? autolinker.link(String(feature.properties['strategie_de_classement']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['origine'] !== null ? autolinker.link(String(feature.properties['origine']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['perimetre_d_utilisation_ou_origine'] !== null ? autolinker.link(String(feature.properties['perimetre_d_utilisation_ou_origine']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['sens_de_l_ecoulement'] !== null ? autolinker.link(String(feature.properties['sens_de_l_ecoulement']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['reseau_principal_coulant'] !== null ? autolinker.link(String(feature.properties['reseau_principal_coulant']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['trace_connu'] !== null ? autolinker.link(String(feature.properties['trace_connu']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['classe_de_largeur'] !== null ? autolinker.link(String(feature.properties['classe_de_largeur']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['type_de_bras'] !== null ? autolinker.link(String(feature.properties['type_de_bras']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['commentaire_sur_l_objet_hydro'] !== null ? autolinker.link(String(feature.properties['commentaire_sur_l_objet_hydro']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['code_du_cours_d_eau_bdcarthage'] !== null ? autolinker.link(String(feature.properties['code_du_cours_d_eau_bdcarthage']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['inventaire_police_de_l_eau'] !== null ? autolinker.link(String(feature.properties['inventaire_police_de_l_eau']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['identifiant_police_de_l_eau'] !== null ? autolinker.link(String(feature.properties['identifiant_police_de_l_eau']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['liens_vers_cours_d_eau'] !== null ? autolinker.link(String(feature.properties['liens_vers_cours_d_eau']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['lien_vers_noeud_hydrographique_ini'] !== null ? autolinker.link(String(feature.properties['lien_vers_noeud_hydrographique_ini']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['lien_vers_noeud_hydrographique_fin'] !== null ? autolinker.link(String(feature.properties['lien_vers_noeud_hydrographique_fin']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['liens_vers_surface_hydrographique'] !== null ? autolinker.link(String(feature.properties['liens_vers_surface_hydrographique']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['lien_vers_entite_de_transition'] !== null ? autolinker.link(String(feature.properties['lien_vers_entite_de_transition']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['cpx_toponyme_de_cours_d_eau'] !== null ? autolinker.link(String(feature.properties['cpx_toponyme_de_cours_d_eau']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['cpx_toponyme_d_entite_de_transition'] !== null ? autolinker.link(String(feature.properties['cpx_toponyme_d_entite_de_transition']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
-
-        function style_tronconhydro_2_0() {
-            return {
-                pane: 'pane_tronconhydro_2',
-                opacity: 1,
-                color: 'rgba(179,217,255,1.0)',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                weight: 4.0,
-                fillOpacity: 0,
-                interactive: true,
-            }
-        }
-        map.createPane('pane_tronconhydro_2');
-        map.getPane('pane_tronconhydro_2').style.zIndex = 402;
-        map.getPane('pane_tronconhydro_2').style['mix-blend-mode'] = 'normal';
-        var layer_tronconhydro_2 = new L.geoJson(json_tronconhydro_2, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_tronconhydro_2',
-            layerName: 'layer_tronconhydro_2',
-            pane: 'pane_tronconhydro_2',
-            onEachFeature: pop_tronconhydro_2,
-            style: style_tronconhydro_2_0,
-        });
-        bounds_group.addLayer(layer_tronconhydro_2);
-        map.addLayer(layer_tronconhydro_2);
-        function pop_BDT_35_GPKG_LAMB93_D079ED20260315detail_hydrographique_3(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['qc_id'] !== null ? autolinker.link(String(feature.properties['qc_id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['cleabs'] !== null ? autolinker.link(String(feature.properties['cleabs']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['nature'] !== null ? autolinker.link(String(feature.properties['nature']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['nature_detaillee'] !== null ? autolinker.link(String(feature.properties['nature_detaillee']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['persistance'] !== null ? autolinker.link(String(feature.properties['persistance']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['toponyme'] !== null ? autolinker.link(String(feature.properties['toponyme']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['statut_du_toponyme'] !== null ? autolinker.link(String(feature.properties['statut_du_toponyme']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['importance'] !== null ? autolinker.link(String(feature.properties['importance']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['etat_de_l_objet'] !== null ? autolinker.link(String(feature.properties['etat_de_l_objet']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['date_creation'] !== null ? autolinker.link(String(feature.properties['date_creation']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['date_modification'] !== null ? autolinker.link(String(feature.properties['date_modification']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['date_d_apparition'] !== null ? autolinker.link(String(feature.properties['date_d_apparition']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['date_de_confirmation'] !== null ? autolinker.link(String(feature.properties['date_de_confirmation']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['sources'] !== null ? autolinker.link(String(feature.properties['sources']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['identifiants_sources'] !== null ? autolinker.link(String(feature.properties['identifiants_sources']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['methode_d_acquisition_planimetrique'] !== null ? autolinker.link(String(feature.properties['methode_d_acquisition_planimetrique']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['precision_planimetrique'] !== null ? autolinker.link(String(feature.properties['precision_planimetrique']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['insee_commune'] !== null ? autolinker.link(String(feature.properties['insee_commune']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['identifiant_voie_ban'] !== null ? autolinker.link(String(feature.properties['identifiant_voie_ban']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['id_ban_odonyme'] !== null ? autolinker.link(String(feature.properties['id_ban_odonyme']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
-
-        function style_BDT_35_GPKG_LAMB93_D079ED20260315detail_hydrographique_3_0() {
-            return {
-                pane: 'pane_BDT_35_GPKG_LAMB93_D079ED20260315detail_hydrographique_3',
-                shape: 'square',
-                radius: 14.0,
-                stroke: false,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(0,102,204,1.0)',
-                interactive: true,
-            }
-        }
-        map.createPane('pane_BDT_35_GPKG_LAMB93_D079ED20260315detail_hydrographique_3');
-        map.getPane('pane_BDT_35_GPKG_LAMB93_D079ED20260315detail_hydrographique_3').style.zIndex = 403;
-        map.getPane('pane_BDT_35_GPKG_LAMB93_D079ED20260315detail_hydrographique_3').style['mix-blend-mode'] = 'normal';
-        var layer_BDT_35_GPKG_LAMB93_D079ED20260315detail_hydrographique_3 = new L.geoJson(json_BDT_35_GPKG_LAMB93_D079ED20260315detail_hydrographique_3, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_BDT_35_GPKG_LAMB93_D079ED20260315detail_hydrographique_3',
-            layerName: 'layer_BDT_35_GPKG_LAMB93_D079ED20260315detail_hydrographique_3',
-            pane: 'pane_BDT_35_GPKG_LAMB93_D079ED20260315detail_hydrographique_3',
-            onEachFeature: pop_BDT_35_GPKG_LAMB93_D079ED20260315detail_hydrographique_3,
-            pointToLayer: function (feature, latlng) {
-                var context = {
-                    feature: feature,
-                    variables: {}
-                };
-                return L.shapeMarker(latlng, style_BDT_35_GPKG_LAMB93_D079ED20260315detail_hydrographique_3_0(feature));
-            },
-        });
-        bounds_group.addLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315detail_hydrographique_3);
-        map.addLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315detail_hydrographique_3);
-        function pop_Surfacehydrographique_4(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['qc_id'] !== null ? autolinker.link(String(feature.properties['qc_id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['cleabs'] !== null ? autolinker.link(String(feature.properties['cleabs']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['code_hydrographique'] !== null ? autolinker.link(String(feature.properties['code_hydrographique']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['code_du_pays'] !== null ? autolinker.link(String(feature.properties['code_du_pays']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['nature'] !== null ? autolinker.link(String(feature.properties['nature']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['position_par_rapport_au_sol'] !== null ? autolinker.link(String(feature.properties['position_par_rapport_au_sol']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['etat_de_l_objet'] !== null ? autolinker.link(String(feature.properties['etat_de_l_objet']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['date_creation'] !== null ? autolinker.link(String(feature.properties['date_creation']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['date_modification'] !== null ? autolinker.link(String(feature.properties['date_modification']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['date_d_apparition'] !== null ? autolinker.link(String(feature.properties['date_d_apparition']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['date_de_confirmation'] !== null ? autolinker.link(String(feature.properties['date_de_confirmation']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['sources'] !== null ? autolinker.link(String(feature.properties['sources']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['identifiants_sources'] !== null ? autolinker.link(String(feature.properties['identifiants_sources']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['methode_d_acquisition_planimetrique'] !== null ? autolinker.link(String(feature.properties['methode_d_acquisition_planimetrique']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['precision_planimetrique'] !== null ? autolinker.link(String(feature.properties['precision_planimetrique']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['methode_d_acquisition_altimetrique'] !== null ? autolinker.link(String(feature.properties['methode_d_acquisition_altimetrique']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['precision_altimetrique'] !== null ? autolinker.link(String(feature.properties['precision_altimetrique']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['mode_d_obtention_des_coordonnees'] !== null ? autolinker.link(String(feature.properties['mode_d_obtention_des_coordonnees']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['mode_d_obtention_de_l_altitude'] !== null ? autolinker.link(String(feature.properties['mode_d_obtention_de_l_altitude']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['statut'] !== null ? autolinker.link(String(feature.properties['statut']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['persistance'] !== null ? autolinker.link(String(feature.properties['persistance']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['salinite'] !== null ? autolinker.link(String(feature.properties['salinite']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['origine'] !== null ? autolinker.link(String(feature.properties['origine']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['commentaire_sur_l_objet_hydro'] !== null ? autolinker.link(String(feature.properties['commentaire_sur_l_objet_hydro']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['liens_vers_plan_d_eau'] !== null ? autolinker.link(String(feature.properties['liens_vers_plan_d_eau']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['liens_vers_cours_d_eau'] !== null ? autolinker.link(String(feature.properties['liens_vers_cours_d_eau']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['lien_vers_entite_de_transition'] !== null ? autolinker.link(String(feature.properties['lien_vers_entite_de_transition']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['cpx_toponyme_de_plan_d_eau'] !== null ? autolinker.link(String(feature.properties['cpx_toponyme_de_plan_d_eau']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['cpx_toponyme_de_cours_d_eau'] !== null ? autolinker.link(String(feature.properties['cpx_toponyme_de_cours_d_eau']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['cpx_toponyme_d_entite_de_transition'] !== null ? autolinker.link(String(feature.properties['cpx_toponyme_d_entite_de_transition']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
-
-        function style_Surfacehydrographique_4_0() {
-            return {
-                pane: 'pane_Surfacehydrographique_4',
-                stroke: false, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(179,217,255,1.0)',
-                interactive: true,
-            }
-        }
-        map.createPane('pane_Surfacehydrographique_4');
-        map.getPane('pane_Surfacehydrographique_4').style.zIndex = 404;
-        map.getPane('pane_Surfacehydrographique_4').style['mix-blend-mode'] = 'normal';
-        var layer_Surfacehydrographique_4 = new L.geoJson(json_Surfacehydrographique_4, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_Surfacehydrographique_4',
-            layerName: 'layer_Surfacehydrographique_4',
-            pane: 'pane_Surfacehydrographique_4',
-            onEachFeature: pop_Surfacehydrographique_4,
-            style: style_Surfacehydrographique_4_0,
-        });
-        bounds_group.addLayer(layer_Surfacehydrographique_4);
-        map.addLayer(layer_Surfacehydrographique_4);
-        function pop_Rservoirhydro_5(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['qc_id'] !== null ? autolinker.link(String(feature.properties['qc_id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['cleabs'] !== null ? autolinker.link(String(feature.properties['cleabs']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['nature'] !== null ? autolinker.link(String(feature.properties['nature']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['etat_de_l_objet'] !== null ? autolinker.link(String(feature.properties['etat_de_l_objet']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['date_creation'] !== null ? autolinker.link(String(feature.properties['date_creation']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['date_modification'] !== null ? autolinker.link(String(feature.properties['date_modification']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['date_d_apparition'] !== null ? autolinker.link(String(feature.properties['date_d_apparition']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['date_de_confirmation'] !== null ? autolinker.link(String(feature.properties['date_de_confirmation']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['sources'] !== null ? autolinker.link(String(feature.properties['sources']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['identifiants_sources'] !== null ? autolinker.link(String(feature.properties['identifiants_sources']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['methode_d_acquisition_planimetrique'] !== null ? autolinker.link(String(feature.properties['methode_d_acquisition_planimetrique']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['precision_planimetrique'] !== null ? autolinker.link(String(feature.properties['precision_planimetrique']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['methode_d_acquisition_altimetrique'] !== null ? autolinker.link(String(feature.properties['methode_d_acquisition_altimetrique']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['precision_altimetrique'] !== null ? autolinker.link(String(feature.properties['precision_altimetrique']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['altitude_minimale_sol'] !== null ? autolinker.link(String(feature.properties['altitude_minimale_sol']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['altitude_minimale_toit'] !== null ? autolinker.link(String(feature.properties['altitude_minimale_toit']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['hauteur'] !== null ? autolinker.link(String(feature.properties['hauteur']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['altitude_maximale_toit'] !== null ? autolinker.link(String(feature.properties['altitude_maximale_toit']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['altitude_maximale_sol'] !== null ? autolinker.link(String(feature.properties['altitude_maximale_sol']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['origine_du_batiment'] !== null ? autolinker.link(String(feature.properties['origine_du_batiment']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['volume'] !== null ? autolinker.link(String(feature.properties['volume']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
-
-        function style_Rservoirhydro_5_0() {
-            return {
-                pane: 'pane_Rservoirhydro_5',
-                opacity: 1,
-                color: 'rgba(0,0,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 4.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(25,160,230,1.0)',
-                interactive: true,
-            }
-        }
-        map.createPane('pane_Rservoirhydro_5');
-        map.getPane('pane_Rservoirhydro_5').style.zIndex = 405;
-        map.getPane('pane_Rservoirhydro_5').style['mix-blend-mode'] = 'normal';
-        var layer_Rservoirhydro_5 = new L.geoJson(json_Rservoirhydro_5, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_Rservoirhydro_5',
-            layerName: 'layer_Rservoirhydro_5',
-            pane: 'pane_Rservoirhydro_5',
-            onEachFeature: pop_Rservoirhydro_5,
-            style: style_Rservoirhydro_5_0,
-        });
-        bounds_group.addLayer(layer_Rservoirhydro_5);
-        map.addLayer(layer_Rservoirhydro_5);
-        function pop_ligneelec_6(feature, layer) {
+        function pop_ligneelec_0(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['qc_id'] !== null ? autolinker.link(String(feature.properties['qc_id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
@@ -919,9 +192,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_ligneelec_6_0() {
+        function style_ligneelec_0_0() {
             return {
-                pane: 'pane_ligneelec_6',
+                pane: 'pane_ligneelec_0',
                 opacity: 1,
                 color: 'rgba(204,0,204,1.0)',
                 dashArray: '',
@@ -932,21 +205,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_ligneelec_6');
-        map.getPane('pane_ligneelec_6').style.zIndex = 406;
-        map.getPane('pane_ligneelec_6').style['mix-blend-mode'] = 'normal';
-        var layer_ligneelec_6 = new L.geoJson(json_ligneelec_6, {
+        map.createPane('pane_ligneelec_0');
+        map.getPane('pane_ligneelec_0').style.zIndex = 400;
+        map.getPane('pane_ligneelec_0').style['mix-blend-mode'] = 'normal';
+        var layer_ligneelec_0 = new L.geoJson(json_ligneelec_0, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_ligneelec_6',
-            layerName: 'layer_ligneelec_6',
-            pane: 'pane_ligneelec_6',
-            onEachFeature: pop_ligneelec_6,
-            style: style_ligneelec_6_0,
+            dataVar: 'json_ligneelec_0',
+            layerName: 'layer_ligneelec_0',
+            pane: 'pane_ligneelec_0',
+            onEachFeature: pop_ligneelec_0,
+            style: style_ligneelec_0_0,
         });
-        bounds_group.addLayer(layer_ligneelec_6);
-        map.addLayer(layer_ligneelec_6);
-        function pop_Routesbrulain_7(feature, layer) {
+        bounds_group.addLayer(layer_ligneelec_0);
+        map.addLayer(layer_ligneelec_0);
+        function pop_Routesbrulain_1(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['qc_id'] !== null ? autolinker.link(String(feature.properties['qc_id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
@@ -1018,15 +291,15 @@
 			});
 			layer.bindPopup(content, { maxHeight: 400 });
         }
-        function style_Routesbrulain_7_0(feature) {
+        function style_Routesbrulain_1_0(feature) {
             var context = {
                 feature: feature,
                 variables: {}
             };
             // Start of if blocks and style check logic
-            if (exp_Routesbrulain_7rule0_eval_expression(context)) {
+            if (exp_Routesbrulain_1rule0_eval_expression(context)) {
                   return {
-                pane: 'pane_Routesbrulain_7',
+                pane: 'pane_Routesbrulain_1',
                 opacity: 1,
                 color: 'rgba(255,127,0,1.0)',
                 dashArray: '',
@@ -1037,9 +310,9 @@
                 interactive: true,
             };
                 }
-                else if (exp_Routesbrulain_7rule1_eval_expression(context)) {
+                else if (exp_Routesbrulain_1rule1_eval_expression(context)) {
                   return {
-                pane: 'pane_Routesbrulain_7',
+                pane: 'pane_Routesbrulain_1',
                 opacity: 1,
                 color: 'rgba(255,255,179,1.0)',
                 dashArray: '',
@@ -1050,9 +323,9 @@
                 interactive: true,
             };
                 }
-                else if (exp_Routesbrulain_7rule2_eval_expression(context)) {
+                else if (exp_Routesbrulain_1rule2_eval_expression(context)) {
                   return {
-                pane: 'pane_Routesbrulain_7',
+                pane: 'pane_Routesbrulain_1',
                 opacity: 1,
                 color: 'rgba(224,224,224,1.0)',
                 dashArray: '',
@@ -1063,9 +336,9 @@
                 interactive: true,
             };
                 }
-                else if (exp_Routesbrulain_7rule3_eval_expression(context)) {
+                else if (exp_Routesbrulain_1rule3_eval_expression(context)) {
                   return {
-                pane: 'pane_Routesbrulain_7',
+                pane: 'pane_Routesbrulain_1',
                 opacity: 1,
                 color: 'rgba(224,224,224,1.0)',
                 dashArray: '',
@@ -1080,21 +353,21 @@
                 return {fill: false, stroke: false};
             }
         }
-        map.createPane('pane_Routesbrulain_7');
-        map.getPane('pane_Routesbrulain_7').style.zIndex = 407;
-        map.getPane('pane_Routesbrulain_7').style['mix-blend-mode'] = 'normal';
-        var layer_Routesbrulain_7 = new L.geoJson(json_Routesbrulain_7, {
+        map.createPane('pane_Routesbrulain_1');
+        map.getPane('pane_Routesbrulain_1').style.zIndex = 401;
+        map.getPane('pane_Routesbrulain_1').style['mix-blend-mode'] = 'normal';
+        var layer_Routesbrulain_1 = new L.geoJson(json_Routesbrulain_1, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Routesbrulain_7',
-            layerName: 'layer_Routesbrulain_7',
-            pane: 'pane_Routesbrulain_7',
-            onEachFeature: pop_Routesbrulain_7,
-            style: style_Routesbrulain_7_0,
+            dataVar: 'json_Routesbrulain_1',
+            layerName: 'layer_Routesbrulain_1',
+            pane: 'pane_Routesbrulain_1',
+            onEachFeature: pop_Routesbrulain_1,
+            style: style_Routesbrulain_1_0,
         });
-        bounds_group.addLayer(layer_Routesbrulain_7);
-        map.addLayer(layer_Routesbrulain_7);
-        function pop_tronconroute_8(feature, layer) {
+        bounds_group.addLayer(layer_Routesbrulain_1);
+        map.addLayer(layer_Routesbrulain_1);
+        function pop_tronconroute_2(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['qc_id'] !== null ? autolinker.link(String(feature.properties['qc_id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
@@ -1367,15 +640,15 @@
 			});
 			layer.bindPopup(content, { maxHeight: 400 });
         }
-        function style_tronconroute_8_0(feature) {
+        function style_tronconroute_2_0(feature) {
             var context = {
                 feature: feature,
                 variables: {}
             };
             // Start of if blocks and style check logic
-            if (exp_tronconroute_8rule0_eval_expression(context)) {
+            if (exp_tronconroute_2rule0_eval_expression(context)) {
                   return {
-                pane: 'pane_tronconroute_8',
+                pane: 'pane_tronconroute_2',
                 opacity: 1,
                 color: 'rgba(255,0,127,1.0)',
                 dashArray: '',
@@ -1386,9 +659,9 @@
                 interactive: true,
             };
                 }
-                else if (exp_tronconroute_8rule1_eval_expression(context)) {
+                else if (exp_tronconroute_2rule1_eval_expression(context)) {
                   return {
-                pane: 'pane_tronconroute_8',
+                pane: 'pane_tronconroute_2',
                 opacity: 1,
                 color: 'rgba(0,0,0,1.0)',
                 dashArray: '',
@@ -1399,9 +672,9 @@
                 interactive: true,
             };
                 }
-                else if (exp_tronconroute_8rule2_eval_expression(context)) {
+                else if (exp_tronconroute_2rule2_eval_expression(context)) {
                   return {
-                pane: 'pane_tronconroute_8',
+                pane: 'pane_tronconroute_2',
                 opacity: 1,
                 color: 'rgba(199,98,39,1.0)',
                 dashArray: '',
@@ -1412,15 +685,15 @@
                 interactive: true,
             };
                 }
-                else if (exp_tronconroute_8rule3_eval_expression(context)) {
+                else if (exp_tronconroute_2rule3_eval_expression(context)) {
                   return {
-                pane: 'pane_tronconroute_8',
+                pane: 'pane_tronconroute_2',
                 interactive: true,
             };
                 }
-                else if (exp_tronconroute_8rule4_eval_expression(context)) {
+                else if (exp_tronconroute_2rule4_eval_expression(context)) {
                   return {
-                pane: 'pane_tronconroute_8',
+                pane: 'pane_tronconroute_2',
                 opacity: 1,
                 color: 'rgba(0,255,0,1.0)',
                 dashArray: '6.0,12.0',
@@ -1431,9 +704,9 @@
                 interactive: true,
             };
                 }
-                else if (exp_tronconroute_8rule5_eval_expression(context)) {
+                else if (exp_tronconroute_2rule5_eval_expression(context)) {
                   return {
-                pane: 'pane_tronconroute_8',
+                pane: 'pane_tronconroute_2',
                 opacity: 1,
                 color: 'rgba(100,100,100,1.0)',
                 dashArray: '32.0,16.0',
@@ -1444,9 +717,9 @@
                 interactive: true,
             };
                 }
-                else if (exp_tronconroute_8rule6_eval_expression(context)) {
+                else if (exp_tronconroute_2rule6_eval_expression(context)) {
                   return {
-                pane: 'pane_tronconroute_8',
+                pane: 'pane_tronconroute_2',
                 opacity: 1,
                 color: 'rgba(45,52,39,1.0)',
                 dashArray: '',
@@ -1457,9 +730,9 @@
                 interactive: true,
             };
                 }
-                else if (exp_tronconroute_8rule7_eval_expression(context)) {
+                else if (exp_tronconroute_2rule7_eval_expression(context)) {
                   return {
-                pane: 'pane_tronconroute_8',
+                pane: 'pane_tronconroute_2',
                 opacity: 1,
                 color: 'rgba(35,92,160,1.0)',
                 dashArray: '',
@@ -1474,21 +747,21 @@
                 return {fill: false, stroke: false};
             }
         }
-        map.createPane('pane_tronconroute_8');
-        map.getPane('pane_tronconroute_8').style.zIndex = 408;
-        map.getPane('pane_tronconroute_8').style['mix-blend-mode'] = 'normal';
-        var layer_tronconroute_8 = new L.geoJson(json_tronconroute_8, {
+        map.createPane('pane_tronconroute_2');
+        map.getPane('pane_tronconroute_2').style.zIndex = 402;
+        map.getPane('pane_tronconroute_2').style['mix-blend-mode'] = 'normal';
+        var layer_tronconroute_2 = new L.geoJson(json_tronconroute_2, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_tronconroute_8',
-            layerName: 'layer_tronconroute_8',
-            pane: 'pane_tronconroute_8',
-            onEachFeature: pop_tronconroute_8,
-            style: style_tronconroute_8_0,
+            dataVar: 'json_tronconroute_2',
+            layerName: 'layer_tronconroute_2',
+            pane: 'pane_tronconroute_2',
+            onEachFeature: pop_tronconroute_2,
+            style: style_tronconroute_2_0,
         });
-        bounds_group.addLayer(layer_tronconroute_8);
-        map.addLayer(layer_tronconroute_8);
-        function pop_batiments_9(feature, layer) {
+        bounds_group.addLayer(layer_tronconroute_2);
+        map.addLayer(layer_tronconroute_2);
+        function pop_batiments_3(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['qc_id'] !== null ? autolinker.link(String(feature.properties['qc_id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
@@ -1587,15 +860,15 @@
 			});
 			layer.bindPopup(content, { maxHeight: 400 });
         }
-        function style_batiments_9_0(feature) {
+        function style_batiments_3_0(feature) {
             var context = {
                 feature: feature,
                 variables: {}
             };
             // Start of if blocks and style check logic
-            if (exp_batiments_9rule0_eval_expression(context)) {
+            if (exp_batiments_3rule0_eval_expression(context)) {
                   return {
-                pane: 'pane_batiments_9',
+                pane: 'pane_batiments_3',
                 opacity: 1,
                 color: 'rgba(196,33,221,1.0)',
                 dashArray: '',
@@ -1608,9 +881,9 @@
                 interactive: true,
             };
                 }
-                else if (exp_batiments_9rule1_eval_expression(context)) {
+                else if (exp_batiments_3rule1_eval_expression(context)) {
                   return {
-                pane: 'pane_batiments_9',
+                pane: 'pane_batiments_3',
                 opacity: 1,
                 color: 'rgba(63,66,231,1.0)',
                 dashArray: '',
@@ -1623,9 +896,9 @@
                 interactive: true,
             };
                 }
-                else if (exp_batiments_9rule2_eval_expression(context)) {
+                else if (exp_batiments_3rule2_eval_expression(context)) {
                   return {
-                pane: 'pane_batiments_9',
+                pane: 'pane_batiments_3',
                 opacity: 1,
                 color: 'rgba(2,142,23,1.0)',
                 dashArray: '',
@@ -1638,9 +911,9 @@
                 interactive: true,
             };
                 }
-                else if (exp_batiments_9rule3_eval_expression(context)) {
+                else if (exp_batiments_3rule3_eval_expression(context)) {
                   return {
-                pane: 'pane_batiments_9',
+                pane: 'pane_batiments_3',
                 opacity: 1,
                 color: 'rgba(0,0,0,1.0)',
                 dashArray: '',
@@ -1653,9 +926,9 @@
                 interactive: true,
             };
                 }
-                else if (exp_batiments_9rule4_eval_expression(context)) {
+                else if (exp_batiments_3rule4_eval_expression(context)) {
                   return {
-                pane: 'pane_batiments_9',
+                pane: 'pane_batiments_3',
                 opacity: 1,
                 color: 'rgba(108,39,39,1.0)',
                 dashArray: '',
@@ -1668,9 +941,9 @@
                 interactive: true,
             };
                 }
-                else if (exp_batiments_9rule5_eval_expression(context)) {
+                else if (exp_batiments_3rule5_eval_expression(context)) {
                   return {
-                pane: 'pane_batiments_9',
+                pane: 'pane_batiments_3',
                 opacity: 1,
                 color: 'rgba(181,148,2,1.0)',
                 dashArray: '',
@@ -1683,9 +956,9 @@
                 interactive: true,
             };
                 }
-                else if (exp_batiments_9rule6_eval_expression(context)) {
+                else if (exp_batiments_3rule6_eval_expression(context)) {
                   return {
-                pane: 'pane_batiments_9',
+                pane: 'pane_batiments_3',
                 opacity: 1,
                 color: 'rgba(105,46,126,1.0)',
                 dashArray: '',
@@ -1698,9 +971,9 @@
                 interactive: true,
             };
                 }
-                else if (exp_batiments_9rule7_eval_expression(context)) {
+                else if (exp_batiments_3rule7_eval_expression(context)) {
                   return {
-                pane: 'pane_batiments_9',
+                pane: 'pane_batiments_3',
                 opacity: 1,
                 color: 'rgba(228,11,11,1.0)',
                 dashArray: '',
@@ -1717,21 +990,21 @@
                 return {fill: false, stroke: false};
             }
         }
-        map.createPane('pane_batiments_9');
-        map.getPane('pane_batiments_9').style.zIndex = 409;
-        map.getPane('pane_batiments_9').style['mix-blend-mode'] = 'normal';
-        var layer_batiments_9 = new L.geoJson(json_batiments_9, {
+        map.createPane('pane_batiments_3');
+        map.getPane('pane_batiments_3').style.zIndex = 403;
+        map.getPane('pane_batiments_3').style['mix-blend-mode'] = 'normal';
+        var layer_batiments_3 = new L.geoJson(json_batiments_3, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_batiments_9',
-            layerName: 'layer_batiments_9',
-            pane: 'pane_batiments_9',
-            onEachFeature: pop_batiments_9,
-            style: style_batiments_9_0,
+            dataVar: 'json_batiments_3',
+            layerName: 'layer_batiments_3',
+            pane: 'pane_batiments_3',
+            onEachFeature: pop_batiments_3,
+            style: style_batiments_3_0,
         });
-        bounds_group.addLayer(layer_batiments_9);
-        map.addLayer(layer_batiments_9);
-        function pop_Terraindesport_10(feature, layer) {
+        bounds_group.addLayer(layer_batiments_3);
+        map.addLayer(layer_batiments_3);
+        function pop_Terraindesport_4(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['qc_id'] !== null ? autolinker.link(String(feature.properties['qc_id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
@@ -1789,9 +1062,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Terraindesport_10_0() {
+        function style_Terraindesport_4_0() {
             return {
-                pane: 'pane_Terraindesport_10',
+                pane: 'pane_Terraindesport_4',
                 opacity: 1,
                 color: 'rgba(14,150,82,1.0)',
                 dashArray: '',
@@ -1804,21 +1077,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_Terraindesport_10');
-        map.getPane('pane_Terraindesport_10').style.zIndex = 410;
-        map.getPane('pane_Terraindesport_10').style['mix-blend-mode'] = 'normal';
-        var layer_Terraindesport_10 = new L.geoJson(json_Terraindesport_10, {
+        map.createPane('pane_Terraindesport_4');
+        map.getPane('pane_Terraindesport_4').style.zIndex = 404;
+        map.getPane('pane_Terraindesport_4').style['mix-blend-mode'] = 'normal';
+        var layer_Terraindesport_4 = new L.geoJson(json_Terraindesport_4, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Terraindesport_10',
-            layerName: 'layer_Terraindesport_10',
-            pane: 'pane_Terraindesport_10',
-            onEachFeature: pop_Terraindesport_10,
-            style: style_Terraindesport_10_0,
+            dataVar: 'json_Terraindesport_4',
+            layerName: 'layer_Terraindesport_4',
+            pane: 'pane_Terraindesport_4',
+            onEachFeature: pop_Terraindesport_4,
+            style: style_Terraindesport_4_0,
         });
-        bounds_group.addLayer(layer_Terraindesport_10);
-        map.addLayer(layer_Terraindesport_10);
-        function pop_cimetiere_11(feature, layer) {
+        bounds_group.addLayer(layer_Terraindesport_4);
+        map.addLayer(layer_Terraindesport_4);
+        function pop_cimetiere_5(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['qc_id'] !== null ? autolinker.link(String(feature.properties['qc_id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
@@ -1885,9 +1158,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_cimetiere_11_0() {
+        function style_cimetiere_5_0() {
             return {
-                pane: 'pane_cimetiere_11',
+                pane: 'pane_cimetiere_5',
                 opacity: 1,
                 color: 'rgba(80,80,80,1.0)',
                 dashArray: '',
@@ -1900,27 +1173,27 @@
                 interactive: true,
             }
         }
-        function style_cimetiere_11_1() {
+        function style_cimetiere_5_1() {
             return {
-                pane: 'pane_cimetiere_11',
+                pane: 'pane_cimetiere_5',
                 interactive: true,
             }
         }
-        map.createPane('pane_cimetiere_11');
-        map.getPane('pane_cimetiere_11').style.zIndex = 411;
-        map.getPane('pane_cimetiere_11').style['mix-blend-mode'] = 'normal';
-        var layer_cimetiere_11 = new L.geoJson.multiStyle(json_cimetiere_11, {
+        map.createPane('pane_cimetiere_5');
+        map.getPane('pane_cimetiere_5').style.zIndex = 405;
+        map.getPane('pane_cimetiere_5').style['mix-blend-mode'] = 'normal';
+        var layer_cimetiere_5 = new L.geoJson.multiStyle(json_cimetiere_5, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_cimetiere_11',
-            layerName: 'layer_cimetiere_11',
-            pane: 'pane_cimetiere_11',
-            onEachFeature: pop_cimetiere_11,
-            styles: [style_cimetiere_11_0,style_cimetiere_11_1,]
+            dataVar: 'json_cimetiere_5',
+            layerName: 'layer_cimetiere_5',
+            pane: 'pane_cimetiere_5',
+            onEachFeature: pop_cimetiere_5,
+            styles: [style_cimetiere_5_0,style_cimetiere_5_1,]
         });
-        bounds_group.addLayer(layer_cimetiere_11);
-        map.addLayer(layer_cimetiere_11);
-        function pop_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12(feature, layer) {
+        bounds_group.addLayer(layer_cimetiere_5);
+        map.addLayer(layer_cimetiere_5);
+        function pop_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['qc_id'] !== null ? autolinker.link(String(feature.properties['qc_id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
@@ -2005,11 +1278,11 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12_0(feature) {
+        function style_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6_0(feature) {
             switch(String(feature.properties['categorie'])) {
                 case 'Administratif ou militaire':
                     return {
-                pane: 'pane_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12',
+                pane: 'pane_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6',
                 opacity: 1,
                 color: 'rgba(0,0,0,1.0)',
                 dashArray: '',
@@ -2024,7 +1297,7 @@
                     break;
                 case 'Culture et loisirs':
                     return {
-                pane: 'pane_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12',
+                pane: 'pane_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6',
                 opacity: 1,
                 color: 'rgba(0,0,0,1.0)',
                 dashArray: '',
@@ -2039,7 +1312,7 @@
                     break;
                 case 'Gestion des eaux':
                     return {
-                pane: 'pane_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12',
+                pane: 'pane_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6',
                 opacity: 1,
                 color: 'rgba(0,0,0,1.0)',
                 dashArray: '',
@@ -2054,7 +1327,7 @@
                     break;
                 case 'Industriel et commercial':
                     return {
-                pane: 'pane_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12',
+                pane: 'pane_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6',
                 opacity: 1,
                 color: 'rgba(0,0,0,1.0)',
                 dashArray: '',
@@ -2069,7 +1342,7 @@
                     break;
                 case 'Religieux':
                     return {
-                pane: 'pane_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12',
+                pane: 'pane_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6',
                 opacity: 1,
                 color: 'rgba(0,0,0,1.0)',
                 dashArray: '',
@@ -2084,7 +1357,7 @@
                     break;
                 case 'Santé':
                     return {
-                pane: 'pane_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12',
+                pane: 'pane_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6',
                 opacity: 1,
                 color: 'rgba(0,0,0,1.0)',
                 dashArray: '',
@@ -2099,7 +1372,7 @@
                     break;
                 case 'Science et enseignement':
                     return {
-                pane: 'pane_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12',
+                pane: 'pane_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6',
                 opacity: 1,
                 color: 'rgba(0,0,0,1.0)',
                 dashArray: '',
@@ -2114,7 +1387,7 @@
                     break;
                 case 'Sport':
                     return {
-                pane: 'pane_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12',
+                pane: 'pane_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6',
                 opacity: 1,
                 color: 'rgba(0,0,0,1.0)',
                 dashArray: '',
@@ -2129,21 +1402,21 @@
                     break;
             }
         }
-        map.createPane('pane_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12');
-        map.getPane('pane_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12').style.zIndex = 412;
-        map.getPane('pane_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12').style['mix-blend-mode'] = 'normal';
-        var layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12 = new L.geoJson(json_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12, {
+        map.createPane('pane_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6');
+        map.getPane('pane_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6').style.zIndex = 406;
+        map.getPane('pane_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6').style['mix-blend-mode'] = 'normal';
+        var layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6 = new L.geoJson(json_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12',
-            layerName: 'layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12',
-            pane: 'pane_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12',
-            onEachFeature: pop_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12,
-            style: style_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12_0,
+            dataVar: 'json_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6',
+            layerName: 'layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6',
+            pane: 'pane_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6',
+            onEachFeature: pop_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6,
+            style: style_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6_0,
         });
-        bounds_group.addLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12);
-        map.addLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12);
-        function pop_pointvoirie_13(feature, layer) {
+        bounds_group.addLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6);
+        map.addLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6);
+        function pop_pointvoirie_7(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['qc_id'] !== null ? autolinker.link(String(feature.properties['qc_id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
@@ -2152,7 +1425,8 @@
                         <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['annotation'] !== null ? autolinker.link(String(feature.properties['annotation']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <th scope="row">annotation</th>\
+                        <td class="visible-with-data" id="annotation">' + (feature.properties['annotation'] !== null ? autolinker.link(String(feature.properties['annotation']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -2162,9 +1436,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_pointvoirie_13_0() {
+        function style_pointvoirie_7_0() {
             return {
-                pane: 'pane_pointvoirie_13',
+                pane: 'pane_pointvoirie_7',
                 radius: 24.0,
                 opacity: 1,
                 color: 'rgba(255,0,0,1.0)',
@@ -2178,27 +1452,27 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_pointvoirie_13');
-        map.getPane('pane_pointvoirie_13').style.zIndex = 413;
-        map.getPane('pane_pointvoirie_13').style['mix-blend-mode'] = 'normal';
-        var layer_pointvoirie_13 = new L.geoJson(json_pointvoirie_13, {
+        map.createPane('pane_pointvoirie_7');
+        map.getPane('pane_pointvoirie_7').style.zIndex = 407;
+        map.getPane('pane_pointvoirie_7').style['mix-blend-mode'] = 'normal';
+        var layer_pointvoirie_7 = new L.geoJson(json_pointvoirie_7, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_pointvoirie_13',
-            layerName: 'layer_pointvoirie_13',
-            pane: 'pane_pointvoirie_13',
-            onEachFeature: pop_pointvoirie_13,
+            dataVar: 'json_pointvoirie_7',
+            layerName: 'layer_pointvoirie_7',
+            pane: 'pane_pointvoirie_7',
+            onEachFeature: pop_pointvoirie_7,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_pointvoirie_13_0(feature));
+                return L.circleMarker(latlng, style_pointvoirie_7_0(feature));
             },
         });
-        bounds_group.addLayer(layer_pointvoirie_13);
-        map.addLayer(layer_pointvoirie_13);
-        function pop_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_14(feature, layer) {
+        bounds_group.addLayer(layer_pointvoirie_7);
+        map.addLayer(layer_pointvoirie_7);
+        function pop_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_8(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['qc_id'] !== null ? autolinker.link(String(feature.properties['qc_id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
@@ -2274,9 +1548,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_14_0() {
+        function style_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_8_0() {
             return {
-                pane: 'pane_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_14',
+                pane: 'pane_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_8',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -2290,77 +1564,27 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_14');
-        map.getPane('pane_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_14').style.zIndex = 414;
-        map.getPane('pane_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_14').style['mix-blend-mode'] = 'normal';
-        var layer_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_14 = new L.geoJson(json_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_14, {
+        map.createPane('pane_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_8');
+        map.getPane('pane_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_8').style.zIndex = 408;
+        map.getPane('pane_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_8').style['mix-blend-mode'] = 'normal';
+        var layer_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_8 = new L.geoJson(json_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_8, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_14',
-            layerName: 'layer_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_14',
-            pane: 'pane_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_14',
-            onEachFeature: pop_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_14,
+            dataVar: 'json_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_8',
+            layerName: 'layer_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_8',
+            pane: 'pane_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_8',
+            onEachFeature: pop_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_8,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_14_0(feature));
+                return L.circleMarker(latlng, style_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_8_0(feature));
             },
         });
-        bounds_group.addLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_14);
-        map.addLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_14);
-        function pop_lieuxditoklieux_dits_15(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['qc_id'] !== null ? autolinker.link(String(feature.properties['qc_id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['nom'] !== null ? autolinker.link(String(feature.properties['nom']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['commune'] !== null ? autolinker.link(String(feature.properties['commune']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['created'] !== null ? autolinker.link(String(feature.properties['created']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['updated'] !== null ? autolinker.link(String(feature.properties['updated']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
-
-        function style_lieuxditoklieux_dits_15_0() {
-            return {
-                pane: 'pane_lieuxditoklieux_dits_15',
-                stroke: false, 
-                fillOpacity: 0,
-                interactive: true,
-            }
-        }
-        map.createPane('pane_lieuxditoklieux_dits_15');
-        map.getPane('pane_lieuxditoklieux_dits_15').style.zIndex = 415;
-        map.getPane('pane_lieuxditoklieux_dits_15').style['mix-blend-mode'] = 'normal';
-        var layer_lieuxditoklieux_dits_15 = new L.geoJson(json_lieuxditoklieux_dits_15, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_lieuxditoklieux_dits_15',
-            layerName: 'layer_lieuxditoklieux_dits_15',
-            pane: 'pane_lieuxditoklieux_dits_15',
-            onEachFeature: pop_lieuxditoklieux_dits_15,
-            style: style_lieuxditoklieux_dits_15_0,
-        });
-        bounds_group.addLayer(layer_lieuxditoklieux_dits_15);
-        map.addLayer(layer_lieuxditoklieux_dits_15);
-        function pop_BDT_35_GPKG_LAMB93_D079ED20260315commune_16(feature, layer) {
+        bounds_group.addLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_8);
+        map.addLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_8);
+        function pop_BDT_35_GPKG_LAMB93_D079ED20260315commune_9(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['qc_id'] !== null ? autolinker.link(String(feature.properties['qc_id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
@@ -2454,9 +1678,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_BDT_35_GPKG_LAMB93_D079ED20260315commune_16_0() {
+        function style_BDT_35_GPKG_LAMB93_D079ED20260315commune_9_0() {
             return {
-                pane: 'pane_BDT_35_GPKG_LAMB93_D079ED20260315commune_16',
+                pane: 'pane_BDT_35_GPKG_LAMB93_D079ED20260315commune_9',
                 opacity: 1,
                 color: 'rgba(255,0,99,1.0)',
                 dashArray: '',
@@ -2467,290 +1691,116 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_BDT_35_GPKG_LAMB93_D079ED20260315commune_16');
-        map.getPane('pane_BDT_35_GPKG_LAMB93_D079ED20260315commune_16').style.zIndex = 416;
-        map.getPane('pane_BDT_35_GPKG_LAMB93_D079ED20260315commune_16').style['mix-blend-mode'] = 'normal';
-        var layer_BDT_35_GPKG_LAMB93_D079ED20260315commune_16 = new L.geoJson(json_BDT_35_GPKG_LAMB93_D079ED20260315commune_16, {
+        map.createPane('pane_BDT_35_GPKG_LAMB93_D079ED20260315commune_9');
+        map.getPane('pane_BDT_35_GPKG_LAMB93_D079ED20260315commune_9').style.zIndex = 409;
+        map.getPane('pane_BDT_35_GPKG_LAMB93_D079ED20260315commune_9').style['mix-blend-mode'] = 'normal';
+        var layer_BDT_35_GPKG_LAMB93_D079ED20260315commune_9 = new L.geoJson(json_BDT_35_GPKG_LAMB93_D079ED20260315commune_9, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_BDT_35_GPKG_LAMB93_D079ED20260315commune_16',
-            layerName: 'layer_BDT_35_GPKG_LAMB93_D079ED20260315commune_16',
-            pane: 'pane_BDT_35_GPKG_LAMB93_D079ED20260315commune_16',
-            onEachFeature: pop_BDT_35_GPKG_LAMB93_D079ED20260315commune_16,
-            style: style_BDT_35_GPKG_LAMB93_D079ED20260315commune_16_0,
+            dataVar: 'json_BDT_35_GPKG_LAMB93_D079ED20260315commune_9',
+            layerName: 'layer_BDT_35_GPKG_LAMB93_D079ED20260315commune_9',
+            pane: 'pane_BDT_35_GPKG_LAMB93_D079ED20260315commune_9',
+            onEachFeature: pop_BDT_35_GPKG_LAMB93_D079ED20260315commune_9,
+            style: style_BDT_35_GPKG_LAMB93_D079ED20260315commune_9_0,
         });
-        bounds_group.addLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315commune_16);
-        map.addLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315commune_16);
-        function pop_BDT_35_GPKG_LAMB93_D079ED20260315voie_nommee_17(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['qc_id'] !== null ? autolinker.link(String(feature.properties['qc_id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['cleabs'] !== null ? autolinker.link(String(feature.properties['cleabs']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['identifiant_voie_ban'] !== null ? autolinker.link(String(feature.properties['identifiant_voie_ban']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['nom_voie_ban'] !== null ? autolinker.link(String(feature.properties['nom_voie_ban']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['insee_commune'] !== null ? autolinker.link(String(feature.properties['insee_commune']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['nom_commune'] !== null ? autolinker.link(String(feature.properties['nom_commune']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['source_voie_ban'] !== null ? autolinker.link(String(feature.properties['source_voie_ban']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['nom_collaboratif'] !== null ? autolinker.link(String(feature.properties['nom_collaboratif']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['type_voie'] !== null ? autolinker.link(String(feature.properties['type_voie']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['mot_directeur'] !== null ? autolinker.link(String(feature.properties['mot_directeur']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['lieux_dits_ban'] !== null ? autolinker.link(String(feature.properties['lieux_dits_ban']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['liens_vers_supports'] !== null ? autolinker.link(String(feature.properties['liens_vers_supports']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['insee_communes_deleguees_ban'] !== null ? autolinker.link(String(feature.properties['insee_communes_deleguees_ban']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['noms_communes_deleguees_ban'] !== null ? autolinker.link(String(feature.properties['noms_communes_deleguees_ban']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['date_creation'] !== null ? autolinker.link(String(feature.properties['date_creation']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['date_modification'] !== null ? autolinker.link(String(feature.properties['date_modification']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['nom_normalise'] !== null ? autolinker.link(String(feature.properties['nom_normalise']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['id_ban_odonyme'] !== null ? autolinker.link(String(feature.properties['id_ban_odonyme']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
-
-        function style_BDT_35_GPKG_LAMB93_D079ED20260315voie_nommee_17_0() {
-            return {
-                pane: 'pane_BDT_35_GPKG_LAMB93_D079ED20260315voie_nommee_17',
-                opacity: 1,
-                color: 'rgba(255,158,23,1.0)',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                weight: 1.0,
-                fillOpacity: 0,
-                interactive: true,
-            }
-        }
-        map.createPane('pane_BDT_35_GPKG_LAMB93_D079ED20260315voie_nommee_17');
-        map.getPane('pane_BDT_35_GPKG_LAMB93_D079ED20260315voie_nommee_17').style.zIndex = 417;
-        map.getPane('pane_BDT_35_GPKG_LAMB93_D079ED20260315voie_nommee_17').style['mix-blend-mode'] = 'normal';
-        var layer_BDT_35_GPKG_LAMB93_D079ED20260315voie_nommee_17 = new L.geoJson(json_BDT_35_GPKG_LAMB93_D079ED20260315voie_nommee_17, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_BDT_35_GPKG_LAMB93_D079ED20260315voie_nommee_17',
-            layerName: 'layer_BDT_35_GPKG_LAMB93_D079ED20260315voie_nommee_17',
-            pane: 'pane_BDT_35_GPKG_LAMB93_D079ED20260315voie_nommee_17',
-            onEachFeature: pop_BDT_35_GPKG_LAMB93_D079ED20260315voie_nommee_17,
-            style: style_BDT_35_GPKG_LAMB93_D079ED20260315voie_nommee_17_0,
-        });
-        bounds_group.addLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315voie_nommee_17);
-        map.addLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315voie_nommee_17);
+        bounds_group.addLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315commune_9);
+        map.addLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315commune_9);
         map.on("zoomend", function(e) {
-            if (map.getZoom() <= 19 && map.getZoom() >= 16) {
-                map.addLayer(layer_Noeudhydro_0);
-            } else if (map.getZoom() > 19 || map.getZoom() < 16) {
-                map.removeLayer(layer_Noeudhydro_0);
-            }
-            if (map.getZoom() <= 19 && map.getZoom() >= 14) {
-                map.addLayer(layer_Courdeau_1);
-            } else if (map.getZoom() > 19 || map.getZoom() < 14) {
-                map.removeLayer(layer_Courdeau_1);
-            }
-            if (map.getZoom() <= 19 && map.getZoom() >= 14) {
-                map.addLayer(layer_tronconhydro_2);
-            } else if (map.getZoom() > 19 || map.getZoom() < 14) {
-                map.removeLayer(layer_tronconhydro_2);
-            }
-            if (map.getZoom() <= 19 && map.getZoom() >= 14) {
-                map.addLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315detail_hydrographique_3);
-            } else if (map.getZoom() > 19 || map.getZoom() < 14) {
-                map.removeLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315detail_hydrographique_3);
-            }
-            if (map.getZoom() <= 19 && map.getZoom() >= 14) {
-                map.addLayer(layer_Surfacehydrographique_4);
-            } else if (map.getZoom() > 19 || map.getZoom() < 14) {
-                map.removeLayer(layer_Surfacehydrographique_4);
-            }
-            if (map.getZoom() <= 19 && map.getZoom() >= 14) {
-                map.addLayer(layer_Rservoirhydro_5);
-            } else if (map.getZoom() > 19 || map.getZoom() < 14) {
-                map.removeLayer(layer_Rservoirhydro_5);
-            }
             if (map.getZoom() <= 19 && map.getZoom() >= 12) {
-                map.addLayer(layer_ligneelec_6);
+                map.addLayer(layer_ligneelec_0);
             } else if (map.getZoom() > 19 || map.getZoom() < 12) {
-                map.removeLayer(layer_ligneelec_6);
+                map.removeLayer(layer_ligneelec_0);
             }
             if (map.getZoom() <= 19 && map.getZoom() >= 15) {
-                map.addLayer(layer_tronconroute_8);
+                map.addLayer(layer_tronconroute_2);
             } else if (map.getZoom() > 19 || map.getZoom() < 15) {
-                map.removeLayer(layer_tronconroute_8);
+                map.removeLayer(layer_tronconroute_2);
             }
             if (map.getZoom() <= 19 && map.getZoom() >= 14) {
-                map.addLayer(layer_batiments_9);
+                map.addLayer(layer_batiments_3);
             } else if (map.getZoom() > 19 || map.getZoom() < 14) {
-                map.removeLayer(layer_batiments_9);
+                map.removeLayer(layer_batiments_3);
             }
             if (map.getZoom() <= 19 && map.getZoom() >= 14) {
-                map.addLayer(layer_Terraindesport_10);
+                map.addLayer(layer_Terraindesport_4);
             } else if (map.getZoom() > 19 || map.getZoom() < 14) {
-                map.removeLayer(layer_Terraindesport_10);
+                map.removeLayer(layer_Terraindesport_4);
             }
             if (map.getZoom() <= 19 && map.getZoom() >= 14) {
-                map.addLayer(layer_cimetiere_11);
+                map.addLayer(layer_cimetiere_5);
             } else if (map.getZoom() > 19 || map.getZoom() < 14) {
-                map.removeLayer(layer_cimetiere_11);
+                map.removeLayer(layer_cimetiere_5);
             }
             if (map.getZoom() <= 19 && map.getZoom() >= 15) {
-                map.addLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12);
+                map.addLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6);
             } else if (map.getZoom() > 19 || map.getZoom() < 15) {
-                map.removeLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12);
+                map.removeLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6);
             }
             if (map.getZoom() <= 19 && map.getZoom() >= 17) {
-                map.addLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_14);
+                map.addLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_8);
             } else if (map.getZoom() > 19 || map.getZoom() < 17) {
-                map.removeLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_14);
-            }
-            if (map.getZoom() <= 19 && map.getZoom() >= 14) {
-                map.addLayer(layer_lieuxditoklieux_dits_15);
-            } else if (map.getZoom() > 19 || map.getZoom() < 14) {
-                map.removeLayer(layer_lieuxditoklieux_dits_15);
+                map.removeLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_8);
             }
             if (map.getZoom() <= 19 && map.getZoom() >= 10) {
-                map.addLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315commune_16);
+                map.addLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315commune_9);
             } else if (map.getZoom() > 19 || map.getZoom() < 10) {
-                map.removeLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315commune_16);
+                map.removeLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315commune_9);
             }
         });
-            if (map.getZoom() <= 19 && map.getZoom() >= 16) {
-                map.addLayer(layer_Noeudhydro_0);
-            } else if (map.getZoom() > 19 || map.getZoom() < 16) {
-                map.removeLayer(layer_Noeudhydro_0);
-            }
-            if (map.getZoom() <= 19 && map.getZoom() >= 14) {
-                map.addLayer(layer_Courdeau_1);
-            } else if (map.getZoom() > 19 || map.getZoom() < 14) {
-                map.removeLayer(layer_Courdeau_1);
-            }
-            if (map.getZoom() <= 19 && map.getZoom() >= 14) {
-                map.addLayer(layer_tronconhydro_2);
-            } else if (map.getZoom() > 19 || map.getZoom() < 14) {
-                map.removeLayer(layer_tronconhydro_2);
-            }
-            if (map.getZoom() <= 19 && map.getZoom() >= 14) {
-                map.addLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315detail_hydrographique_3);
-            } else if (map.getZoom() > 19 || map.getZoom() < 14) {
-                map.removeLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315detail_hydrographique_3);
-            }
-            if (map.getZoom() <= 19 && map.getZoom() >= 14) {
-                map.addLayer(layer_Surfacehydrographique_4);
-            } else if (map.getZoom() > 19 || map.getZoom() < 14) {
-                map.removeLayer(layer_Surfacehydrographique_4);
-            }
-            if (map.getZoom() <= 19 && map.getZoom() >= 14) {
-                map.addLayer(layer_Rservoirhydro_5);
-            } else if (map.getZoom() > 19 || map.getZoom() < 14) {
-                map.removeLayer(layer_Rservoirhydro_5);
-            }
             if (map.getZoom() <= 19 && map.getZoom() >= 12) {
-                map.addLayer(layer_ligneelec_6);
+                map.addLayer(layer_ligneelec_0);
             } else if (map.getZoom() > 19 || map.getZoom() < 12) {
-                map.removeLayer(layer_ligneelec_6);
+                map.removeLayer(layer_ligneelec_0);
             }
             if (map.getZoom() <= 19 && map.getZoom() >= 15) {
-                map.addLayer(layer_tronconroute_8);
+                map.addLayer(layer_tronconroute_2);
             } else if (map.getZoom() > 19 || map.getZoom() < 15) {
-                map.removeLayer(layer_tronconroute_8);
+                map.removeLayer(layer_tronconroute_2);
             }
             if (map.getZoom() <= 19 && map.getZoom() >= 14) {
-                map.addLayer(layer_batiments_9);
+                map.addLayer(layer_batiments_3);
             } else if (map.getZoom() > 19 || map.getZoom() < 14) {
-                map.removeLayer(layer_batiments_9);
+                map.removeLayer(layer_batiments_3);
             }
             if (map.getZoom() <= 19 && map.getZoom() >= 14) {
-                map.addLayer(layer_Terraindesport_10);
+                map.addLayer(layer_Terraindesport_4);
             } else if (map.getZoom() > 19 || map.getZoom() < 14) {
-                map.removeLayer(layer_Terraindesport_10);
+                map.removeLayer(layer_Terraindesport_4);
             }
             if (map.getZoom() <= 19 && map.getZoom() >= 14) {
-                map.addLayer(layer_cimetiere_11);
+                map.addLayer(layer_cimetiere_5);
             } else if (map.getZoom() > 19 || map.getZoom() < 14) {
-                map.removeLayer(layer_cimetiere_11);
+                map.removeLayer(layer_cimetiere_5);
             }
             if (map.getZoom() <= 19 && map.getZoom() >= 15) {
-                map.addLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12);
+                map.addLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6);
             } else if (map.getZoom() > 19 || map.getZoom() < 15) {
-                map.removeLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12);
+                map.removeLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6);
             }
             if (map.getZoom() <= 19 && map.getZoom() >= 17) {
-                map.addLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_14);
+                map.addLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_8);
             } else if (map.getZoom() > 19 || map.getZoom() < 17) {
-                map.removeLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_14);
-            }
-            if (map.getZoom() <= 19 && map.getZoom() >= 14) {
-                map.addLayer(layer_lieuxditoklieux_dits_15);
-            } else if (map.getZoom() > 19 || map.getZoom() < 14) {
-                map.removeLayer(layer_lieuxditoklieux_dits_15);
+                map.removeLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_8);
             }
             if (map.getZoom() <= 19 && map.getZoom() >= 10) {
-                map.addLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315commune_16);
+                map.addLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315commune_9);
             } else if (map.getZoom() > 19 || map.getZoom() < 10) {
-                map.removeLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315commune_16);
+                map.removeLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315commune_9);
             }
         var overlaysTree = [
-        {label: '<b>non utilisé a pas filter</b>',  selectAllCheckbox: true, children: [
-            {label: '<img src="legend/BDT_35_GPKG_LAMB93_D079ED20260315voie_nommee_17.png" /> BDT_3-5_GPKG_LAMB93_D079-ED2026-03-15 — voie_nommee', layer: layer_BDT_35_GPKG_LAMB93_D079ED20260315voie_nommee_17},]},
         {label: '<b>Nom et bati</b>',  selectAllCheckbox: true, children: [
-            {label: '<img src="legend/BDT_35_GPKG_LAMB93_D079ED20260315commune_16.png" /> BDT_3-5_GPKG_LAMB93_D079-ED2026-03-15 — commune', layer: layer_BDT_35_GPKG_LAMB93_D079ED20260315commune_16},
-            {label: '<img src="legend/lieuxditoklieux_dits_15.png" /> lieux dit ok — lieux_dits', layer: layer_lieuxditoklieux_dits_15},
-            {label: '<img src="legend/BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_14.png" /> BDT_3-5_GPKG_LAMB93_D079-ED2026-03-15 — adresse_ban', layer: layer_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_14},
-            {label: '<img src="legend/pointvoirie_13.png" /> point voirie', layer: layer_pointvoirie_13},
-            {label: 'BDT_3-5_GPKG_LAMB93_D079-ED2026-03-15 — zone_d_activite_ou_d_interet<br /><table><tr><td style="text-align: center;"><img src="legend/BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12_Administratifoumilitaire0.png" /></td><td>Administratif ou militaire</td></tr><tr><td style="text-align: center;"><img src="legend/BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12_Cultureetloisirs1.png" /></td><td>Culture et loisirs</td></tr><tr><td style="text-align: center;"><img src="legend/BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12_Gestiondeseaux2.png" /></td><td>Gestion des eaux</td></tr><tr><td style="text-align: center;"><img src="legend/BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12_Industrieletcommercial3.png" /></td><td>Industriel et commercial</td></tr><tr><td style="text-align: center;"><img src="legend/BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12_Religieux4.png" /></td><td>Religieux</td></tr><tr><td style="text-align: center;"><img src="legend/BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12_Santé5.png" /></td><td>Santé</td></tr><tr><td style="text-align: center;"><img src="legend/BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12_Scienceetenseignement6.png" /></td><td>Science et enseignement</td></tr><tr><td style="text-align: center;"><img src="legend/BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12_Sport7.png" /></td><td>Sport</td></tr></table>', layer: layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12},
-            {label: '<img src="legend/cimetiere_11.png" /> cimetiere', layer: layer_cimetiere_11},
-            {label: '<img src="legend/Terraindesport_10.png" /> Terrain de sport', layer: layer_Terraindesport_10},
-            {label: 'batiments<br /><table><tr><td style="text-align: center;"><img src="legend/batiments_9_Résidentiel0.png" /></td><td>Résidentiel</td></tr><tr><td style="text-align: center;"><img src="legend/batiments_9_Annexe1.png" /></td><td>Annexe</td></tr><tr><td style="text-align: center;"><img src="legend/batiments_9_Agricole2.png" /></td><td>Agricole</td></tr><tr><td style="text-align: center;"><img src="legend/batiments_9_Commercialetservices3.png" /></td><td>Commercial et services</td></tr><tr><td style="text-align: center;"><img src="legend/batiments_9_Industriel4.png" /></td><td>Industriel</td></tr><tr><td style="text-align: center;"><img src="legend/batiments_9_Sportif5.png" /></td><td>Sportif</td></tr><tr><td style="text-align: center;"><img src="legend/batiments_9_Religieux6.png" /></td><td>Religieux</td></tr><tr><td style="text-align: center;"><img src="legend/batiments_9_Indifférencié7.png" /></td><td>Indifférencié</td></tr></table>', layer: layer_batiments_9},]},
+            {label: '<img src="legend/BDT_35_GPKG_LAMB93_D079ED20260315commune_9.png" /> BDT_3-5_GPKG_LAMB93_D079-ED2026-03-15 — commune', layer: layer_BDT_35_GPKG_LAMB93_D079ED20260315commune_9},
+            {label: '<img src="legend/BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_8.png" /> BDT_3-5_GPKG_LAMB93_D079-ED2026-03-15 — adresse_ban', layer: layer_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_8},
+            {label: '<img src="legend/pointvoirie_7.png" /> point voirie', layer: layer_pointvoirie_7},
+            {label: 'BDT_3-5_GPKG_LAMB93_D079-ED2026-03-15 — zone_d_activite_ou_d_interet<br /><table><tr><td style="text-align: center;"><img src="legend/BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6_Administratifoumilitaire0.png" /></td><td>Administratif ou militaire</td></tr><tr><td style="text-align: center;"><img src="legend/BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6_Cultureetloisirs1.png" /></td><td>Culture et loisirs</td></tr><tr><td style="text-align: center;"><img src="legend/BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6_Gestiondeseaux2.png" /></td><td>Gestion des eaux</td></tr><tr><td style="text-align: center;"><img src="legend/BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6_Industrieletcommercial3.png" /></td><td>Industriel et commercial</td></tr><tr><td style="text-align: center;"><img src="legend/BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6_Religieux4.png" /></td><td>Religieux</td></tr><tr><td style="text-align: center;"><img src="legend/BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6_Santé5.png" /></td><td>Santé</td></tr><tr><td style="text-align: center;"><img src="legend/BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6_Scienceetenseignement6.png" /></td><td>Science et enseignement</td></tr><tr><td style="text-align: center;"><img src="legend/BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6_Sport7.png" /></td><td>Sport</td></tr></table>', layer: layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6},
+            {label: '<img src="legend/cimetiere_5.png" /> cimetiere', layer: layer_cimetiere_5},
+            {label: '<img src="legend/Terraindesport_4.png" /> Terrain de sport', layer: layer_Terraindesport_4},
+            {label: 'batiments<br /><table><tr><td style="text-align: center;"><img src="legend/batiments_3_Résidentiel0.png" /></td><td>Résidentiel</td></tr><tr><td style="text-align: center;"><img src="legend/batiments_3_Annexe1.png" /></td><td>Annexe</td></tr><tr><td style="text-align: center;"><img src="legend/batiments_3_Agricole2.png" /></td><td>Agricole</td></tr><tr><td style="text-align: center;"><img src="legend/batiments_3_Commercialetservices3.png" /></td><td>Commercial et services</td></tr><tr><td style="text-align: center;"><img src="legend/batiments_3_Industriel4.png" /></td><td>Industriel</td></tr><tr><td style="text-align: center;"><img src="legend/batiments_3_Sportif5.png" /></td><td>Sportif</td></tr><tr><td style="text-align: center;"><img src="legend/batiments_3_Religieux6.png" /></td><td>Religieux</td></tr><tr><td style="text-align: center;"><img src="legend/batiments_3_Indifférencié7.png" /></td><td>Indifférencié</td></tr></table>', layer: layer_batiments_3},]},
         {label: '<b>routes</b>', collapsed: true, selectAllCheckbox: true, children: [
-            {label: 'troncon route<br /><table><tr><td style="text-align: center;"><img src="legend/tronconroute_8_Bacouliaisonmaritime0.png" /></td><td>Bac ou liaison maritime</td></tr><tr><td style="text-align: center;"><img src="legend/tronconroute_8_Bretelle1.png" /></td><td>Bretelle</td></tr><tr><td style="text-align: center;"><img src="legend/tronconroute_8_Chemin2.png" /></td><td>Chemin</td></tr><tr><td style="text-align: center;"><img src="legend/tronconroute_8_Escalier3.png" /></td><td>Escalier</td></tr><tr><td style="text-align: center;"><img src="legend/tronconroute_8_Pistecyclable4.png" /></td><td>Piste cyclable</td></tr><tr><td style="text-align: center;"><img src="legend/tronconroute_8_Routeempierrée5.png" /></td><td>Route empierrée</td></tr><tr><td style="text-align: center;"><img src="legend/tronconroute_8_Sentier6.png" /></td><td>Sentier</td></tr><tr><td style="text-align: center;"><img src="legend/tronconroute_8_Typeautoroutier7.png" /></td><td>Type autoroutier</td></tr></table>', layer: layer_tronconroute_8},
-            {label: 'Routes brulain<br /><table><tr><td style="text-align: center;"><img src="legend/Routesbrulain_7_secondary0.png" /></td><td>secondary</td></tr><tr><td style="text-align: center;"><img src="legend/Routesbrulain_7_tertiary1.png" /></td><td>tertiary</td></tr><tr><td style="text-align: center;"><img src="legend/Routesbrulain_7_residential2.png" /></td><td>residential</td></tr><tr><td style="text-align: center;"><img src="legend/Routesbrulain_7_unclassified3.png" /></td><td>unclassified</td></tr></table>', layer: layer_Routesbrulain_7},]},
+            {label: 'troncon route<br /><table><tr><td style="text-align: center;"><img src="legend/tronconroute_2_Bacouliaisonmaritime0.png" /></td><td>Bac ou liaison maritime</td></tr><tr><td style="text-align: center;"><img src="legend/tronconroute_2_Bretelle1.png" /></td><td>Bretelle</td></tr><tr><td style="text-align: center;"><img src="legend/tronconroute_2_Chemin2.png" /></td><td>Chemin</td></tr><tr><td style="text-align: center;"><img src="legend/tronconroute_2_Escalier3.png" /></td><td>Escalier</td></tr><tr><td style="text-align: center;"><img src="legend/tronconroute_2_Pistecyclable4.png" /></td><td>Piste cyclable</td></tr><tr><td style="text-align: center;"><img src="legend/tronconroute_2_Routeempierrée5.png" /></td><td>Route empierrée</td></tr><tr><td style="text-align: center;"><img src="legend/tronconroute_2_Sentier6.png" /></td><td>Sentier</td></tr><tr><td style="text-align: center;"><img src="legend/tronconroute_2_Typeautoroutier7.png" /></td><td>Type autoroutier</td></tr></table>', layer: layer_tronconroute_2},
+            {label: 'Routes brulain<br /><table><tr><td style="text-align: center;"><img src="legend/Routesbrulain_1_secondary0.png" /></td><td>secondary</td></tr><tr><td style="text-align: center;"><img src="legend/Routesbrulain_1_tertiary1.png" /></td><td>tertiary</td></tr><tr><td style="text-align: center;"><img src="legend/Routesbrulain_1_residential2.png" /></td><td>residential</td></tr><tr><td style="text-align: center;"><img src="legend/Routesbrulain_1_unclassified3.png" /></td><td>unclassified</td></tr></table>', layer: layer_Routesbrulain_1},]},
         {label: '<b>Communs</b>',  selectAllCheckbox: true, children: [
-            {label: '<img src="legend/ligneelec_6.png" /> ligne elec', layer: layer_ligneelec_6},]},
-        {label: '<b>hydro</b>',  selectAllCheckbox: true, children: [
-            {label: '<img src="legend/Rservoirhydro_5.png" /> Réservoir hydro', layer: layer_Rservoirhydro_5},
-            {label: '<img src="legend/Surfacehydrographique_4.png" /> Surface hydrographique', layer: layer_Surfacehydrographique_4},
-            {label: '<img src="legend/BDT_35_GPKG_LAMB93_D079ED20260315detail_hydrographique_3.png" /> BDT_3-5_GPKG_LAMB93_D079-ED2026-03-15 — detail_hydrographique', layer: layer_BDT_35_GPKG_LAMB93_D079ED20260315detail_hydrographique_3},
-            {label: '<img src="legend/tronconhydro_2.png" /> troncon hydro', layer: layer_tronconhydro_2},
-            {label: '<img src="legend/Courdeau_1.png" /> Cour d eau', layer: layer_Courdeau_1},
-            {label: '<img src="legend/Noeudhydro_0.png" /> Noeud hydro', layer: layer_Noeudhydro_0},]},]
+            {label: '<img src="legend/ligneelec_0.png" /> ligne elec', layer: layer_ligneelec_0},]},]
         var lay = L.control.layers.tree(null, overlaysTree,{
             //namedToggle: true,
             //selectorBack: false,
@@ -2813,35 +1863,24 @@
         });       
         map.on("zoomend", function(){
 
-                if (map.hasLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315detail_hydrographique_3)) {
+                if (map.hasLayer(layer_Terraindesport_4)) {
                     if (map.getZoom() <= 16 && map.getZoom() >= 19) {
-                        layer_BDT_35_GPKG_LAMB93_D079ED20260315detail_hydrographique_3.eachLayer(function (layer) {
+                        layer_Terraindesport_4.eachLayer(function (layer) {
                             layer.openTooltip();
                         });
                     } else {
-                        layer_BDT_35_GPKG_LAMB93_D079ED20260315detail_hydrographique_3.eachLayer(function (layer) {
+                        layer_Terraindesport_4.eachLayer(function (layer) {
                             layer.closeTooltip();
                         });
                     }
                 }
-                if (map.hasLayer(layer_Terraindesport_10)) {
+                if (map.hasLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6)) {
                     if (map.getZoom() <= 16 && map.getZoom() >= 19) {
-                        layer_Terraindesport_10.eachLayer(function (layer) {
+                        layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6.eachLayer(function (layer) {
                             layer.openTooltip();
                         });
                     } else {
-                        layer_Terraindesport_10.eachLayer(function (layer) {
-                            layer.closeTooltip();
-                        });
-                    }
-                }
-                if (map.hasLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12)) {
-                    if (map.getZoom() <= 16 && map.getZoom() >= 19) {
-                        layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12.eachLayer(function (layer) {
-                            layer.openTooltip();
-                        });
-                    } else {
-                        layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12.eachLayer(function (layer) {
+                        layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6.eachLayer(function (layer) {
                             layer.closeTooltip();
                         });
                     }
@@ -2849,12 +1888,12 @@
         });
         setBounds();
         var i = 0;
-        layer_ligneelec_6.eachLayer(function(layer) {
+        layer_ligneelec_0.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['voltage'] !== null?String('<div style="color: #cc00cc; font-size: 9pt; font-family: \'Ubuntu Sans\', sans-serif;">' + layer.feature.properties['voltage']).replace(/\\n/g, '<br>') + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_ligneelec_6'});
+            layer.bindTooltip((layer.feature.properties['voltage'] !== null?String('<div style="color: #cc00cc; font-size: 9pt; font-family: \'Ubuntu Sans\', sans-serif;">' + layer.feature.properties['voltage']).replace(/\\n/g, '<br>') + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_ligneelec_0'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -2862,12 +1901,12 @@
               i++;
         });
         var i = 0;
-        layer_Routesbrulain_7.eachLayer(function(layer) {
+        layer_Routesbrulain_1.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['name'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['name']).replace(/\\n/g, '<br>') + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Routesbrulain_7'});
+            layer.bindTooltip((layer.feature.properties['name'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['name']).replace(/\\n/g, '<br>') + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Routesbrulain_1'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -2875,12 +1914,12 @@
               i++;
         });
         var i = 0;
-        layer_Terraindesport_10.eachLayer(function(layer) {
+        layer_Terraindesport_4.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['nature_detaillee'] !== null?String('<div style="color: #0e9652; font-size: 10pt; font-family: \'Ubuntu Sans\', sans-serif;">' + layer.feature.properties['nature_detaillee']).replace(/\\n/g, '<br>') + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Terraindesport_10'});
+            layer.bindTooltip((layer.feature.properties['nature_detaillee'] !== null?String('<div style="color: #0e9652; font-size: 10pt; font-family: \'Ubuntu Sans\', sans-serif;">' + layer.feature.properties['nature_detaillee']).replace(/\\n/g, '<br>') + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Terraindesport_4'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -2888,12 +1927,12 @@
               i++;
         });
         var i = 0;
-        layer_cimetiere_11.eachLayer(function(layer) {
+        layer_cimetiere_5.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['toponyme'] !== null?String('<div style="color: #505050; font-size: 9pt; font-weight: bold; font-family: \'Ubuntu Sans\', sans-serif;">' + layer.feature.properties['toponyme']).replace(/\\n/g, '<br>') + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_cimetiere_11'});
+            layer.bindTooltip((layer.feature.properties['toponyme'] !== null?String('<div style="color: #505050; font-size: 9pt; font-weight: bold; font-family: \'Ubuntu Sans\', sans-serif;">' + layer.feature.properties['toponyme']).replace(/\\n/g, '<br>') + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_cimetiere_5'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -2901,99 +1940,49 @@
               i++;
         });
         var i = 0;
-        layer_pointvoirie_13.eachLayer(function(layer) {
+        layer_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_8.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['annotation'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['annotation']).replace(/\\n/g, '<br>') + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_pointvoirie_13'});
+            layer.bindTooltip((layer.feature.properties['numero'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['numero']).replace(/\\n/g, '<br>') + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_8'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
               addLabel(layer, i);
               i++;
         });
-        var i = 0;
-        layer_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_14.eachLayer(function(layer) {
-            var context = {
-                feature: layer.feature,
-                variables: {}
-            };
-            layer.bindTooltip((layer.feature.properties['numero'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['numero']).replace(/\\n/g, '<br>') + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_14'});
-            labels.push(layer);
-            totalMarkers += 1;
-              layer.added = true;
-              addLabel(layer, i);
-              i++;
-        });
-        var i = 0;
-        layer_lieuxditoklieux_dits_15.eachLayer(function(layer) {
-            var context = {
-                feature: layer.feature,
-                variables: {}
-            };
-            layer.bindTooltip((layer.feature.properties['nom'] !== null?String('<div style="color: #555555; font-size: 6pt; font-style: italic; font-family: \'Liberation Sans Narrow\', sans-serif;">' + layer.feature.properties['nom']).replace(/\\n/g, '<br>') + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_lieuxditoklieux_dits_15'});
-            labels.push(layer);
-            totalMarkers += 1;
-              layer.added = true;
-              addLabel(layer, i);
-              i++;
-        });
-        var i = 0;
-        layer_BDT_35_GPKG_LAMB93_D079ED20260315voie_nommee_17.eachLayer(function(layer) {
-            var context = {
-                feature: layer.feature,
-                variables: {}
-            };
-            layer.bindTooltip((layer.feature.properties['nom_voie_ban'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['nom_voie_ban']).replace(/\\n/g, '<br>') + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_BDT_35_GPKG_LAMB93_D079ED20260315voie_nommee_17'});
-            labels.push(layer);
-            totalMarkers += 1;
-              layer.added = true;
-              addLabel(layer, i);
-              i++;
-        });
-                if (map.hasLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315detail_hydrographique_3)) {
+                if (map.hasLayer(layer_Terraindesport_4)) {
                     if (map.getZoom() <= 16 && map.getZoom() >= 19) {
-                        layer_BDT_35_GPKG_LAMB93_D079ED20260315detail_hydrographique_3.eachLayer(function (layer) {
+                        layer_Terraindesport_4.eachLayer(function (layer) {
                             layer.openTooltip();
                         });
                     } else {
-                        layer_BDT_35_GPKG_LAMB93_D079ED20260315detail_hydrographique_3.eachLayer(function (layer) {
+                        layer_Terraindesport_4.eachLayer(function (layer) {
                             layer.closeTooltip();
                         });
                     }
                 }
-                if (map.hasLayer(layer_Terraindesport_10)) {
+                if (map.hasLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6)) {
                     if (map.getZoom() <= 16 && map.getZoom() >= 19) {
-                        layer_Terraindesport_10.eachLayer(function (layer) {
+                        layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6.eachLayer(function (layer) {
                             layer.openTooltip();
                         });
                     } else {
-                        layer_Terraindesport_10.eachLayer(function (layer) {
+                        layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6.eachLayer(function (layer) {
                             layer.closeTooltip();
                         });
                     }
                 }
-                if (map.hasLayer(layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12)) {
-                    if (map.getZoom() <= 16 && map.getZoom() >= 19) {
-                        layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12.eachLayer(function (layer) {
-                            layer.openTooltip();
-                        });
-                    } else {
-                        layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12.eachLayer(function (layer) {
-                            layer.closeTooltip();
-                        });
-                    }
-                }
-        resetLabels([layer_Noeudhydro_0,layer_Courdeau_1,layer_BDT_35_GPKG_LAMB93_D079ED20260315detail_hydrographique_3,layer_Surfacehydrographique_4,layer_ligneelec_6,layer_Routesbrulain_7,layer_Terraindesport_10,layer_cimetiere_11,layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12,layer_pointvoirie_13,layer_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_14,layer_lieuxditoklieux_dits_15,layer_BDT_35_GPKG_LAMB93_D079ED20260315voie_nommee_17]);
+        resetLabels([layer_ligneelec_0,layer_Routesbrulain_1,layer_Terraindesport_4,layer_cimetiere_5,layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6,layer_pointvoirie_7,layer_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_8]);
         map.on("zoomend", function(){
-            resetLabels([layer_Noeudhydro_0,layer_Courdeau_1,layer_BDT_35_GPKG_LAMB93_D079ED20260315detail_hydrographique_3,layer_Surfacehydrographique_4,layer_ligneelec_6,layer_Routesbrulain_7,layer_Terraindesport_10,layer_cimetiere_11,layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12,layer_pointvoirie_13,layer_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_14,layer_lieuxditoklieux_dits_15,layer_BDT_35_GPKG_LAMB93_D079ED20260315voie_nommee_17]);
+            resetLabels([layer_ligneelec_0,layer_Routesbrulain_1,layer_Terraindesport_4,layer_cimetiere_5,layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6,layer_pointvoirie_7,layer_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_8]);
         });
         map.on("layeradd", function(){
-            resetLabels([layer_Noeudhydro_0,layer_Courdeau_1,layer_BDT_35_GPKG_LAMB93_D079ED20260315detail_hydrographique_3,layer_Surfacehydrographique_4,layer_ligneelec_6,layer_Routesbrulain_7,layer_Terraindesport_10,layer_cimetiere_11,layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12,layer_pointvoirie_13,layer_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_14,layer_lieuxditoklieux_dits_15,layer_BDT_35_GPKG_LAMB93_D079ED20260315voie_nommee_17]);
+            resetLabels([layer_ligneelec_0,layer_Routesbrulain_1,layer_Terraindesport_4,layer_cimetiere_5,layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6,layer_pointvoirie_7,layer_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_8]);
         });
         map.on("layerremove", function(){
-            resetLabels([layer_Noeudhydro_0,layer_Courdeau_1,layer_BDT_35_GPKG_LAMB93_D079ED20260315detail_hydrographique_3,layer_Surfacehydrographique_4,layer_ligneelec_6,layer_Routesbrulain_7,layer_Terraindesport_10,layer_cimetiere_11,layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_12,layer_pointvoirie_13,layer_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_14,layer_lieuxditoklieux_dits_15,layer_BDT_35_GPKG_LAMB93_D079ED20260315voie_nommee_17]);
+            resetLabels([layer_ligneelec_0,layer_Routesbrulain_1,layer_Terraindesport_4,layer_cimetiere_5,layer_BDT_35_GPKG_LAMB93_D079ED20260315zone_d_activite_ou_d_interet_6,layer_pointvoirie_7,layer_BDT_35_GPKG_LAMB93_D079ED20260315adresse_ban_8]);
         });
         </script>        
     </body>
